@@ -1,0 +1,89 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+    <style>
+        .haha{
+            position: fixed;
+            height: 250px;
+            width: 250px;
+            left: 500px;
+            top: 300px;
+        }
+        .dududu{
+            position: fixed;
+            left: 800px;
+            top: 350px;
+        }
+        
+    
+        .dudududu{
+            position: fixed;
+            left: 820px;
+            top: 350px;
+        }
+        
+        .hahaha{
+            position: fixed;
+            height: 400px;
+            width: 600px;
+            left: 360px;
+            top: 230px;
+        }
+    </style>
+
+    <body style="background-image: url('/static/navybluegradient.png'); background-size: 100%; ">
+
+            {% if hasil == 'Positive review' %}
+                
+        
+                <img class="haha" src="/static/positives.png">
+                
+                <div class="dududu">
+                    <h1 style="color:white; font-size: 50px;">Wow! you like the game! </h1>
+                    <p style="font-size: 25px; color: white; text-align: center;">Maybe you can try my suggestion <br> feature to find more games like that!</p> 
+                </div>
+
+            {% else %}
+                <img class="hahaha" src="/static/negatives.png" >
+
+                <div class="dudududu">
+                    <h1 style="color:white; font-size: 45px;">Oh no! You don't like the game! </h1> 
+                    <p style="font-size: 25px; color: white; text-align: center;">Maybe you can try my suggestion <br> feature to find better games like that!</h2> 
+                </div>
+            {% endif %}
+        
+    </body>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+    
+{% endblock %}

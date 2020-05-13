@@ -1,0 +1,100 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+
+<body style="background-image: url('/static/recom.png'); background-size: 100%; ">  
+    <center>
+    <h1 style="color:white; margin-top: 150px; position: center;">GAME RECOMMENDATION SYSTEM BY USER PROFILE</h1>
+    <h3 style="color:white">Drop down some games and rate it and I'll suggest you games similar to it!</h3>
+
+        <form action="{{url_for('output_profil')}}" style="height: auto; width: 30%; margin-top: 50px; margin-bottom: 150px;" >
+
+            <div class="form-row">
+                <div class="col">
+                    <select class="form-control form control-sm mt-2" name="game1">
+                        <option value="" disabled selected>Input Game Name</option>
+                        {% for item in game_names%}
+                            <option value="{{item}}">{{item}}</option>
+                        {% endfor%}
+                    </select>
+                </div>
+
+                <div class="col">
+                    <input type="number" name='rating1' max="10" min="0" placeholder="Your Rating" class="form-control form control-sm mt-2">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col">
+                    <select class="form-control form control-sm mt-2" name="game2">
+                        <option value="" disabled selected>Input Game Name</option>
+                        {% for item in game_names%}
+                            <option value="{{item}}">{{item}}</option>
+                        {% endfor%}
+                    </select>
+                </div>
+
+                <div class="col">
+                    <input type="number" name='rating2' max="10" min="0" placeholder="Your Rating" class="form-control form control-sm mt-2">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col">
+                    <select class="form-control form control-sm mt-2" name="game3">
+                        <option value="" disabled selected>Input Game Name</option>
+                        {% for item in game_names%}
+                            <option value="{{item}}">{{item}}</option>
+                        {% endfor%}
+                    </select>
+                </div>
+
+                <div class="col">
+                    <input type="number" name='rating3' max="10" min="0" placeholder="Your Rating" class="form-control form control-sm mt-2">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col">
+                    <select class="form-control form control-sm mt-2" name="game4">
+                        <option value="" disabled selected>Input Game Name</option>
+                        {% for item in game_names%}
+                            <option value="{{item}}">{{item}}</option>
+                        {% endfor%}
+                    </select>
+                </div>
+
+                <div class="col">
+                    <input type="number" name='rating4' max="10" min="0" placeholder="Your Rating" class="form-control form control-sm mt-2">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col">
+                    <select class="form-control form control-sm mt-2" name="game5">
+                        <option value="" disabled selected>Input Game Name</option>
+                        {% for item in game_names%}
+                            <option value="{{item}}">{{item}}</option>
+                        {% endfor%}
+                    </select>
+                </div>
+
+                <div class="col">
+                    <input type="number" name='rating5' max="10" min="0" placeholder="Your Rating" class="form-control form control-sm mt-2">
+                </div>
+            </div>
+
+            <!-- Type Reccomendation -->
+            <select name="recommendation_by" class="form-control form control-sm mt-2">
+                <option value="" disabled selected> recommendation-by </option>
+                <option value="Genre"> Genre</option>
+                <option value="Tags"> Tags</option>
+                <option value="TagsGenre"> Tags & Genre</option>
+            </select>
+
+            <br>
+            <input type="submit" class="btn btn-info " value="Enter">
+        </form>
+   </center>
+</body>
+{% endblock %}

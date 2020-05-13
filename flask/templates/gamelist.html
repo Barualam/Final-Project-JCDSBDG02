@@ -1,0 +1,36 @@
+{% extends 'layout.html'%}
+
+{% block body %}
+<body style="background-image: url('/static/navybluegradient.png'); background-size: 100%; ">
+    <br>
+    <center><h1 style="color: white;">GAME LIST </h1></center>
+    <br>
+
+    <div style="margin-right:100px; margin-left: 100px;">
+        <table class="table" style="width:100%;table-layout:fixed" >
+            <thead style="background-color: #171a21;">
+                <tr>
+                    {% for item in data.columns %}
+                        <th style="color:white;">{{item}}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody style="background-image:url('/static/tablecolors.jpg'); background-size: 100%;">
+                {% for index, item in data.iterrows() %}
+                    <tr>
+                        {%for col in item %}
+                            <td style="color: white;">{{col}}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+
+<style>
+    .table  {
+        background: url(http://yourdomain.com/semi-transparent.png)
+    }
+</style>
+{% endblock body %}

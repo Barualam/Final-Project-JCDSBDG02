@@ -1,0 +1,20 @@
+
+{% extends 'layout.html' %}
+{% block body %}
+
+
+<body style="background-image: url('/static/navybluegradient.png'); background-size: 100%; ">
+    <center>
+    <h1 style="color:white; margin-top: 150px; position: center; font-size: 60px;">USER REVIEW DETECTION</h1>
+
+    <h3 style="color:white; font-size: 25px;">Wanna see a magic trick? Leave a comment about a game and I'll know wether it's a positive or negative review!</h3>
+    <form action="{{url_for('output_nlp')}}" style="margin-top: 100px; margin-bottom: 150px;" >
+        
+        <textarea name="areview" cols="80" rows="10"></textarea>
+        <br>
+        <br>
+        <input type="submit" class="btn btn-info" value="Enter">
+    </form>
+    </center>
+</body>
+{% endblock %}

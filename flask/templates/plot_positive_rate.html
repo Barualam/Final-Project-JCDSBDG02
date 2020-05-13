@@ -1,0 +1,46 @@
+{% extends 'layout.html'%}
+
+{% block body %}
+
+<body style="background-image: url('/static/navybluegradient.png'); background-size: 100%; ">
+    <center>
+        <p style="color: white; font-size:60px; margin-top: 50px; margin-bottom: 0px;">POSITIVE RATE FEATURE VISUALIZATION</p>
+            <div >
+                <div class="chart mt-0" id="visualisasi_positive_rate">
+                </div>
+            </div>
+       
+        <script>
+            var visualisasi_positive_rate = {{data | safe}}
+            Plotly.plot('visualisasi_positive_rate',visualisasi_positive_rate,{})   
+        </script>
+    </center>
+        <br>
+    
+    <nav aria-label="...">
+        <ul class="pagination justify-content-center">
+
+        
+        <li class="page-item"><a class="page-link text-dark" href="/visualisasi_achievement">Previous</a></li>
+
+
+        <li class="page-item"><a class="page-link text-dark" href="/visualisasi_achievement">10</a></li>
+
+        <li class="page-item active">
+            <span class="page-link bg-dark text-white " style="border: gray;" >11<span class="sr-only">(current)</span>
+            </span>
+        </li>
+
+        <li class="page-item disabled">
+            <span class="page-link">12</span>
+        </li>
+        
+        <li class="page-item disabled">
+            <span class="page-link">Next</span>
+        </li>
+        </ul>
+    </nav>
+</body>
+
+
+{% endblock body %}

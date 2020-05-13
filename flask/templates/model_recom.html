@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+{% block body %}
+<body style="background-image: url('/static/recom.png'); background-size: 100%; ">
+    <center>
+    <h1 style="color:white; margin-top: 150px; position: center; font-size: 60px;">WELCOME TO STEAM GAME RECOMMENDER</h1>
+    <h3 style="color:white; font-size: 25px;">Want to find a game similar to your favorite? Drop it down below and I'll give you some!</h3>
+
+        <form action="{{url_for('output_recommended')}}" style="height: auto; width: 30%; margin-top: 100px; margin-bottom: 200px;" >
+            
+            <select class="form-control form control-sm mt-2" name="game">
+                <option value="" disabled selected>Input Game Name</option>
+                {% for item in game_names%}
+                    <option value="{{item}}">{{item}}</option>
+                {% endfor%}
+            </select>
+
+            <!-- Type Reccomendation -->
+            <select name="recommendation_by" class="form-control form control-sm mt-2">
+                <option value="" disabled selected> recommendation-by </option>
+                <option value="Genre"> Genre</option>
+                <option value="Tags"> Tags</option>
+                <option value="TagsGenre"> Tags & Genre</option>
+            </select>
+
+            <br>
+            <input type="submit" class="btn btn-info" value="Enter">
+        </form>
+   </center>
+</body>
+{% endblock %}

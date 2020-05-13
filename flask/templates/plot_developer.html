@@ -1,0 +1,42 @@
+{% extends 'layout.html'%}
+
+{% block body %}
+
+<body style="background-image: url('/static/navybluegradient.png'); background-size: 100%; ">
+    <center>
+        <p style="color: white; font-size:60px; margin-top: 50px;margin-bottom: 0px;">DEVELOPER FEATURE VISUALIZATION</p>
+            <div >
+                <div class="chart mt-0" id="visualisasi_developer">
+                </div>
+            </div>
+       
+        <script>
+            var visualisasi_developer = {{data | safe}}
+            Plotly.plot('visualisasi_developer',visualisasi_developer,{})   
+        </script>
+    </center>
+        <br>
+    
+    <nav aria-label="...">
+        <ul class="pagination justify-content-center">
+
+        
+        <li class="page-item"><a class="page-link text-dark" href="/visualisasi_language">Previous</a></li>
+        <li class="page-item"><a class="page-link text-dark" href="/visualisasi_year">1</a></li>
+
+    
+        <li class="page-item"><a class="page-link text-dark" href="/visualisasi_language">2</a></li>
+        
+        <li class="page-item active">
+            <span class="page-link bg-dark text-white " style="border: gray;" >3<span class="sr-only">(current)</span>
+            </span>
+        </li>
+
+        <li class="page-item">
+            <a class="page-link text-dark" href="/visualisasi_publisher">Next</a>
+        </li>
+        </ul>
+    </nav>
+</body>
+
+{% endblock body %}

@@ -1,0 +1,41 @@
+{% extends 'layout.html'%}
+
+{% block body %}
+<body style="background-image: url('/static/navybluegradient.png'); background-size: 100%; ">
+    <center>
+        <p style="color: white; font-size:60px; margin-top: 50px; margin-bottom: 0px;">GENRE FEATURE VISUALIZATION</p>
+            <div >
+                <div class="chart mt-0" id="visualisasi_genre">
+                </div>
+            </div>
+       
+        <script>
+            var visualisasi_genre = {{data | safe}}
+            Plotly.plot('visualisasi_genre',visualisasi_genre,{})   
+        </script>
+    </center>
+        <br>
+    
+    <nav aria-label="...">
+        <ul class="pagination justify-content-center">
+
+        
+        <li class="page-item"><a class="page-link text-dark" href="/visualisasi_category">Previous</a></li>
+
+        <li class="page-item"><a class="page-link text-dark" href="/visualisasi_category">7</a></li>
+
+        <li class="page-item active">
+            <span class="page-link bg-dark text-white " style="border: gray;" >8<span class="sr-only">(current)</span>
+            </span>
+        </li>
+
+        <li class="page-item"><a class="page-link text-dark" href="/visualisasi_steamspy_tags">9</a></li>
+        
+        <li class="page-item">
+            <a class="page-link text-dark" href="/visualisasi_steamspy_tags">Next</a>
+        </li>
+        </ul>
+    </nav>
+</body>
+
+{% endblock body %}

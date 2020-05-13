@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+{% block body %}
+<body style="background-image: url('/static/navybluegradient.png'); background-size: 100%; ">
+
+
+    {% if result == 'wrong' %}
+    <center>
+        <div style="text-align: center; margin-top: 300px; margin-bottom: 250px;">
+        <h1 style="color:white">Sorry! Maybe you input the wrong game or ratings</h1>
+        <h1 style="color:white">Please check if you spelled it correct.</h1>
+        <h1 style="color:white">Or try with another game</h1>
+        </div>
+    </center>
+
+    {% else %}
+    <br>
+    <center><h1 style="color: white;">Based on what games you've entered... <br> I can recommend you these games: </h1></center>
+    <br>
+
+        <div style="margin-right:100px; margin-left: 100px;">
+            <table class="table">
+                <thead style="background-color: #171a21;">
+                    <tr>
+                        {% for item in test.columns %}
+                            <th style="color:white;">{{item}}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody style="background-image:url('/static/tablecolors.jpg'); background-size: 100%;">
+                    {% for index, item in test.iterrows() %}
+                        <tr>
+                            {%for col in item %}
+                            <td style="color: white;">{{col}}</td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </body>
+    {% endif %}
+{% endblock %}

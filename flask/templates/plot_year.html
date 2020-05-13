@@ -1,0 +1,42 @@
+{% extends 'layout.html'%}
+
+{% block body %}
+<body style="background-image: url('/static/navybluegradient.png'); background-size: 100%; ">
+    <center>
+        <p style="color: white; font-size:60px; margin-top: 50px; margin-bottom: 0px;">YEAR FEATURE VISUALIZATION</p>
+            <div >
+                <div class="chart mt-0" id="visualisasi_year">
+                </div>
+            </div>
+       
+       
+        <script>
+            var visualisasi_year = {{data | safe}}
+            Plotly.plot('visualisasi_year',visualisasi_year,{})   
+        </script>
+    </center>
+        <br>
+    
+    <nav aria-label="...">
+        <ul class="pagination justify-content-center">
+
+        <li class="page-item disabled">
+            <span class="page-link">Previous</span>
+        </li>
+
+        <li class="page-item active">
+            <span class="page-link bg-dark text-white " style="border: gray;" >1<span class="sr-only">(current)</span>
+            </span>
+        </li>
+
+        <li class="page-item"><a class="page-link text-dark" href="/visualisasi_language">2</a></li>
+
+        <li class="page-item"><a class="page-link text-dark" href="/visualisasi_developer">3</a></li>
+        <li class="page-item">
+            <a class="page-link text-dark" href="/visualisasi_language">Next</a>
+        </li>
+        </ul>
+    </nav>
+</body>
+
+{% endblock body %}
