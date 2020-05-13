@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+  <body style="background-color: #1b2737;">
+    <img src="/static/about.jpg" style="float: right; width: 40%; height: 40%; margin-top: 100px;margin-left: 50px;">
+    <h1 style="color: white; font-size: 60px; margin: 100px; margin-bottom: 50px;">Recommender System Dataset</h1>
+    <p style="color: white; margin: 70px; text-align:  justify;">
+        This dataset was gathered from the Steam Store and SteamSpy APIs, this dataset provides information about various aspect of games on the store
+        such as its genre and the estimated number of owners. Gathered around May 2019, it contains most games on the stores release prior to that date. 
+        <br> <br>
+        appid : <b class="aa">Unique identifier for each title </b> <br>
+        name : <b class="aa">Title of app (game)</b> <br>
+        release_date : <b class="aa">Release date in format YYYY-MM-DD</b> <br>
+        english : <b class="aa">Language support: 1 if is in English </b><br>
+        developer   : <b class="aa">Name (or names) of developer(s). Semicolon delimited if multiple</b> <br>
+        publisher   : <b class="aa">Name (or names) of publisher(s). Semicolon delimited if multiple</b> <br>
+        platforms : <b class="aa">Semicolon delimited list of supported platforms. At most includes: windowsmaclinux</b> <br>
+        required_age : <b class="aa">Minimum required age according to PEGI UK standards. Many with 0 are unrated or unsupplied.</b> <br>
+        categories  : <b class="aa">Semicolon delimited list of game categories, e.g. single-playermulti-player</b><br>
+        genres  : <b class="aa">Semicolon delimited list of game genres, e.g. actionadventure </b><br>
+        steamspy_tags : <b class="aa">Semicolon delimited list of top steamspy game tags, similar to genres but community voted, e.g. actionadventure </b><br>
+        achievements  : <b class="aa">Number of in-games achievements, if any</b> <br>
+        positive_ratings : <b class="aa">Number of positive ratings, from SteamSpy</b> <br>
+        negative_ratings : <b class="aa">Number of negative ratings, from SteamSpy</b> <br>
+        average_playtime : <b class="aa">Average user playtime, from SteamSpy</b> <br>
+        median_playtime : <b class="aa">Median user playtime, from SteamSpy</b> <br>
+        owners   : <b class="aa">Estimated number of owners. Contains lower and upper bound (like 20000-50000)</b> <br>
+        price    : <b class="aa">Current full price of title in GBP, (pounds sterling)</b> <br>
+    </p>
+
+
+</body>
+
+<style>
+  .aa{
+    color: gray;
+  }
+</style>
+
+{% endblock body %}

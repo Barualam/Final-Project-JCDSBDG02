@@ -19,6 +19,10 @@ def about():
 def about2():
     return render_template('about2.html')
 
+@app.route('/about_recom')
+def about_recom():
+    return render_template('about_recom.html')
+
 @app.route('/list_game')
 def table_data():
     data = list_game()
