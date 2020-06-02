@@ -98,11 +98,12 @@ And found the best parameter are n estimator = 300, min sample split = 8, min sa
 | Random Forest | 0.83 | 0.80 | 0.93 | 0.86 |
 
 ## 6. Dashboard
-![alt text](image_for_readme/nlp.png)
 > User put the review here
-![alt text](image_for_readme/negative.png)
+![alt text](image_for_readme/nlp.png)
 > Output if the review is negative
-![alt text](image_for_readme/positive.png)
+![alt text](image_for_readme/negative.png)
 > Output if the review is positive
+![alt text](image_for_readme/positive.png)
+
 
 
