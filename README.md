@@ -68,29 +68,31 @@ To increase the accuracy of my modeling efforts, i decided to choose 3 best mode
 I experimented wiht Logistic Regression, Multinomial NB and Random Forest classification.
 ### Logisitic Regression
 For Logistic Regression, I grid searched through :
-- *penalty : [l1, l2]*
-- *C : np.logspace(-4,4,20)*
+- *penalty = [l1, l2]*
+- *C = np.logspace(-4,4,20)*
 
-And found the best parameters are penalty : 'l2' and C : 4.281 to achieve the following scores :
+And found the best parameters are penalty = 'l2' and C = 4.281 to achieve the following scores :
 Model | Accuray | Precison | Recall | F1 |
 Logistic Regression | 0.86 | 0.87 | 0.89 | 0.88 |
 
 ### Multinomial Naive Bayes
 For this model, I grid searched through : 
-- *alpha : np.linspace(0.5, 1.5, 6)*
-- *fit_prior : [True, False]*
+- *alpha = np.linspace(0.5, 1.5, 6)*
+- *fit_prior = [True, False]*
 
-And found the best parameters are alpha : 1.5 and fit_prior : False to achieve the following scores:
+And found the best parameters are alpha = 1.5 and fit_prior = False to achieve the following scores:
 Model | Accuray | Precison | Recall | F1 |
 Multinomial NB | 0.84 | 0.86 | 0.86 | 0.86 |
 
+### Random Forest
+For this model, I grid searched through :
+- n estimator = [100,200,300]
+- min samples split = [8,10,12]
+- min samples leaf = [3,4,5]
+
+And found the best parameter are n estimator = 300, min sample split = 8, min sample leaf = 3 to achieve the folliwng scores:
+Model | Accuray | Precison | Recall | F1 |
+Random Forest | 0.83 | 0.80 | 0.93 | 0.86 |
 
 
 
-
-
-
-
-
-The second solution is a Game Recommendation System in which, 
-the system will suggest a user fifteen games based on their profile and games the play. This will save the users time to find the perfect game, as all they have to do is try out what is mentioned in the list. Click RECOMMENDATION MODEL for more information about the model.
