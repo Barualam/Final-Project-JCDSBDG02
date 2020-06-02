@@ -24,7 +24,7 @@ The data included features like :
 - User Suggestion
 
 ## 2. Data Cleaning
-Before doing the count vectorizer, it needed to do some data cleaning process such as :
+Before doing the count vectorizer, it needed to do some data cleaning process such as:
 - Remove all non english reviews
 - Remove all 'Early Access Review' sentence
 - Remove punctuation 
@@ -45,7 +45,7 @@ Pre-processing involved transforming the clean reviews into numberical data. I u
 vectorizer
 
 ## 4. Modeling (Classification)
-The classification problem involved predicting whether a user is giving positive or negative review. I tried some algorithm such as :
+The classification problem involved predicting whether a user is giving positive or negative review. I tried some algorithm such as:
 - Logistic Regression
 - Multinomial Naive Bayes
 - Decision Tree
@@ -60,6 +60,7 @@ Which gave me the followings results for 5 fold CV:
 | Decision Tree       | 0.652 | 0.999 | 0.685 |
 | Random Forest       | 0.768 | 0.999| 0.829 |
 | K Neighbour         | 0.621 | 0.838| 0.769 |
+
 From all of this model i choosed Logistic Regression as the best model consider it has the highest crossval and test accurcy score
 
 ## 5. Hyper Parameter Optimization
@@ -82,8 +83,6 @@ For this model, I grid searched through :
 And found the best parameters are alpha : 1.5 and fit_prior : False to achieve the following scores:
 Model | Accuray | Precison | Recall | F1 |
 Multinomial NB | 0.84 | 0.86 | 0.86 | 0.86 |
-
-
 
 
 
