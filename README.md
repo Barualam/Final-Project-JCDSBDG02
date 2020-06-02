@@ -72,8 +72,8 @@ For Logistic Regression, I grid searched through :
 - *C = np.logspace(-4,4,20)*
 
 And found the best parameters are penalty = 'l2' and C = 4.281 to achieve the following scores :
-Model | Accuray | Precison | Recall | F1 |
-Logistic Regression | 0.86 | 0.87 | 0.89 | 0.88 |
+| Model | Accuray | Precison | Recall | F1 |
+| Logistic Regression | 0.86 | 0.87 | 0.89 | 0.88 |
 
 ### Multinomial Naive Bayes
 For this model, I grid searched through : 
@@ -81,8 +81,8 @@ For this model, I grid searched through :
 - *fit_prior = [True, False]*
 
 And found the best parameters are alpha = 1.5 and fit_prior = False to achieve the following scores:
-Model | Accuray | Precison | Recall | F1 |
-Multinomial NB | 0.84 | 0.86 | 0.86 | 0.86 |
+| Model | Accuray | Precison | Recall | F1 |
+| Multinomial NB | 0.84 | 0.86 | 0.86 | 0.86 |
 
 ### Random Forest
 For this model, I grid searched through :
@@ -91,8 +91,15 @@ For this model, I grid searched through :
 - min samples leaf = [3,4,5]
 
 And found the best parameter are n estimator = 300, min sample split = 8, min sample leaf = 3 to achieve the folliwng scores:
-Model | Accuray | Precison | Recall | F1 |
-Random Forest | 0.83 | 0.80 | 0.93 | 0.86 |
+| Model | Accuray | Precison | Recall | F1 |
+| Random Forest | 0.83 | 0.80 | 0.93 | 0.86 |
 
+## 6. Dashboard
+Input
+![alt text](image_for_readme/nlp.png)
+Positive Output
+![alt text](image_for_readme/negative.png)
+Negative Output
+![alt text](image_for_readme/positive.png)
 
 
