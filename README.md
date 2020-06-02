@@ -16,7 +16,8 @@ This system will be a big help to the game developers as it will allow them to c
 game ideas since they know the likes and dislikes of the users. 
 
 ## 1 About Data
-The dataset is obtained from kaggle <a href="https://www.kaggle.com/whoiskk/steam-game-reviews">https://www.kaggle.com/whoiskk/steam-game-reviews/</a>, which contains around 17000 reviews from 44 different game titles
+The dataset is obtained from kaggle <a href="https://www.kaggle.com/whoiskk/steam-game-reviews">https://www.kaggle.com/whoiskk/steam-game-reviews/</a>, which contains around 17000 reviews from 44 different game titles.
+
 The data included features like :
 - Title 
 - Year 
