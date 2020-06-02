@@ -106,4 +106,6 @@ And found the best parameter are n estimator = 300, min sample split = 8, min sa
 ![alt text](image_for_readme/positive.png)
 
 
-
+# B. Steam Recommendation System 
+Game Recommendation system will suggest a user fifteen games based on their profile and games the play. This will save the users time to find the perfect game, as all they have to do is try out what is mentioned in the list.
+I used content based filtering algorithm based on the games genre, and steam tags to create this recommendation system
